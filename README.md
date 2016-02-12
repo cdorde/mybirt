@@ -7,21 +7,23 @@ sh start.sh
 
 or
 
-docker run --name <Your container name> -i -t 
-       -p <Port whereyou want BIRT to work>:8080 
-       -v <Your path to reports designer on host>:/usr/local/tomcat/webapps/birt/reports 
+```Dockerfile
+docker run --name <<Your container name>> -i -t 
+       -p <<Port whereyou want BIRT to work>>:8080 
+       -v <<Your path to reports designer on host>>:/usr/local/tomcat/webapps/birt/reports 
        cdorde/mybirt:4.5.0
-
+```
 
 If you want to start container as daemon use
 
+```Dockerfile
 docker run --name <Your container name> -i -t 
        -p <Port whereyou want BIRT to work>:8080 
        -v <Your path to reports designer on host>:/usr/local/tomcat/webapps/birt/reports 
        -d 
        --restart=always
        cdorde/mybirt:4.5.0
-
+```
 
 After container is started, open browser and try to access tomcat on address
 
