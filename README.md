@@ -1,13 +1,15 @@
 # mybirt
 ##Docker automated build for Birt 4.5.0
 
-If you want to start container in foreground mode using 
+For starting container you can use start.sh script:
 
 ```
-sh start.sh 
+sh start.sh <Name of container> <Port where tomcat will server Birt> <Path to reports directory> <(F)oreground or (D)aemon mod
 ```
 
 >or
+
+If you want to start container in foreground mode use
 
 ```dockerfile
 docker run --name <Your container name> -i -t 
