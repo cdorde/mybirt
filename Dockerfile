@@ -5,7 +5,7 @@ RUN apt-get -y --force-yes install wget
 RUN apt-get -y --force-yes install unzip
 
 #COPY birt-runtime-4.5.0-20150609.zip /tmp/birt.zip
-RUN wget "http://download.eclipse.org/birt/downloads/drops/R-R1-4_5_0-201506092134/birt-runtime-4.5.0-20150609.zip" -P /tmp -O /tmp/birt.zip
+RUN wget -nv "http://download.eclipse.org/birt/downloads/drops/R-R1-4_5_0-201506092134/birt-runtime-4.5.0-20150609.zip" -P /tmp -O /tmp/birt.zip
 RUN unzip "/tmp/birt.zip" -d /tmp/birt
 RUN mv "/tmp/birt/birt-runtime-4_5_0/birt.war" "/usr/local/tomcat/webapps/birt.war"
 RUN rm /tmp/birt.zip
@@ -14,7 +14,12 @@ RUN unzip /usr/local/tomcat/webapps/birt.war -d /usr/local/tomcat/webapps/birt
 RUN cd /usr/local/tomcat && ln -s /etc/tomcat conf
 
 #Add JDBC
-COPY ojdbc6.jar /usr/local/tomcat/webapps/birt/WEB-INF/lib
+#COPY ojdbc6.jar /usr/local/tomcat/webapps/birt/WEB-INF/lib
+RUN wget "http://www.java2s.com/Code/JarDownload/ojdbc6/ojdbc6.jar.zip" -P /tmp -O /tmp/ojdbc6.jar.zip
+RUN unzip /tmp/ojdbc6.jar.zip -d /tmp
+RUN cp /tmp/ojdbc6.jar /usr/local/tomcat/webapps/birt/WEB-INF/lib
+RUN rm /tmp/ojdbc6.jar.zip
+RUN rm /tmp/ojdbc6.jar
 
 # Map Reports folder
 VOLUME /usr/local/tomcat/webapps/birt/reports
