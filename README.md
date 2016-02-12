@@ -4,7 +4,7 @@
 For starting container you can use start.sh script:
 
 ```
-sh start.sh <Name of container> <Port where tomcat will server Birt> <Path to reports directory> <(F)oreground or (D)aemon mod
+sh start.sh <Name of container> <Port where tomcat will serve Birt> <Path to reports directory> <(F)oreground or (D)aemon mod
 ```
 
 >or
