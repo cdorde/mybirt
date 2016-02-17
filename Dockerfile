@@ -24,6 +24,7 @@ RUN rm /tmp/ojdbc6.jar
 # Map Reports folder
 VOLUME /usr/local/tomcat/webapps/birt/reports
 VOLUME /usr/local/tomcat/webapps/birt
+VOLUME /usr/share/fonts/truetype
 
 #Start
 CMD ["catalina.sh", "run"]
