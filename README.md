@@ -1,5 +1,5 @@
 # mybirt
-##Docker automated build for Birt 4.5.0
+##Docker automated build for Birt 4.6.0
 
 For starting container you can use start.sh script:
 
