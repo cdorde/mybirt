@@ -1,5 +1,5 @@
 # mybirt
-##Docker automated build for Birt 4.6.0
+##Docker automated build for Birt (4.6.0 & 4.5.0)
 
 For starting container you can use start.sh script:
 
@@ -13,7 +13,7 @@ If you want to start container in foreground mode use
 
 ```dockerfile
 docker run --name <Your container name> -i -t 
-       -p <Port whereyou want BIRT to work>:8080 
+       -p <Port where you want BIRT to work>:8080 
        -v <Your path to reports design files on host>:/usr/local/tomcat/webapps/birt/reports 
        cdorde/mybirt:latest
 ```
@@ -23,7 +23,7 @@ If you want to start container as daemon use
 
 ```dockerfile
 docker run --name <Your container name> -i -t 
-       -p <Port whereyou want BIRT to work>:8080 
+       -p <Port where you want BIRT to work>:8080 
        -v <Your path to reports design files on host>:/usr/local/tomcat/webapps/birt/reports 
        -d 
        --restart=always
