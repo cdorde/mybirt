@@ -1,8 +1,7 @@
 FROM tomcat:8.5.71-jre11-temurin
 MAINTAINER "Dorde Cvijanovic <cdorde@gmail.com>"
 
-RUN apt-get -y --force-yes install wget
-RUN apt-get -y --force-yes install unzip
+RUN apt-get update && apt-get install wget unzip zip -y
 
 #COPY birt-runtime-4.5.0-20150609.zip /tmp/birt.zip
 #RUN wget -nv "http://download.eclipse.org/birt/downloads/drops/R-R1-4_5_0-201506092134/birt-runtime-4.5.0-20150609.zip" -P /tmp -O /tmp/birt.zip
