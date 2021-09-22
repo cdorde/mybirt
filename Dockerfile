@@ -1,4 +1,4 @@
-FROM tomcat:8.0
+FROM tomcat:8.5.71-jre11-temurin
 MAINTAINER "Dorde Cvijanovic <cdorde@gmail.com>"
 
 RUN apt-get -y --force-yes install wget
