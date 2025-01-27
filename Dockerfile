@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install wget unzip zip -y
 #RUN wget -nv "https://download.eclipse.org/birt/downloads/drops/R-R1-4.7.0-201706222054/birt-runtime-4.7.0-20170622.zip" -P /tmp -O /tmp/birt.zip
 #RUN wget -nv "https://download.eclipse.org/birt/downloads/drops/I-R1-4.8.0-201905212138/birt-runtime-4.8.0-20190521.zip" -P /tmp -O /tmp/birt.zip
 #RUN wget -nv "https://download.eclipse.org/birt/downloads/drops/I-R1-4.9.0-201905231911/birt-runtime-4.9.0-20190523.zip" -P /tmp -O /tmp/birt.zip
-RUN wget -nv "https://www.eclipse.org/downloads/download.php?file=/birt/updates/release/4.18.0/BIRT-Updates-4.18.0.zip&mirror_id=1285" -P /tmp -O /tmp/birt.zip
+RUN wget -nv "https://eclipse.mirror.garr.it/birt/updates/release/4.18.0/downloads/birt-runtime-4.18.0-202412050604.zip" -P /tmp -O /tmp/birt.zip
 RUN unzip "/tmp/birt.zip" -d /tmp/birt
 RUN mv "/tmp/birt/birt.war" "/usr/local/tomcat/webapps/birt.war"
 RUN rm /tmp/birt.zip
